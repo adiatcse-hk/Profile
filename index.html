@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Adiat Hasan Riyad | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { darkBg: '#030712', lightBg: '#ffffff', primary: '#3b82f6' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s ease; }
+        .glass { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .light .glass { background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.08); }
+        .cyber-card { transition: all 0.3s ease; border-left: 4px solid transparent; }
+        .cyber-card:hover { border-left-color: #3b82f6; transform: translateX(5px); }
+        .badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; font-weight: bold; text-transform: uppercase; }
+        
+        /* Circular Profile Glow */
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="dark:bg-darkBg dark:text-gray-200 light:bg-lightBg light:text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass px-6 py-3 rounded-2xl shadow-2xl">
+            <div class="text-xl font-extrabold tracking-tighter uppercase">ADIAT<span class="text-primary"> HASAN RIYAD</span></div>
+            <div class="hidden lg:flex gap-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#projects" class="hover:text-primary transition">Projects</a>
+                <a href="#experience" class="hover:text-primary transition">Experience</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="w-10 h-10 rounded-xl glass flex items-center justify-center text-primary">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+                <a href="mailto:adiatcse@gmail.com" class="bg-primary text-white px-5 py-2 rounded-xl text-xs font-bold hover:opacity-90 transition">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="relative order-2 lg:order-1" data-aos="zoom-in">
+                <!-- Circular Image Frame -->
+                <div class="profile-container relative w-64 h-64 md:w-96 md:h-96 mx-auto">
+                    <img src="profile.jpeg" alt="Md. Adiat Hasan Riyad" 
+                         class="w-full h-full rounded-full object-cover border-4 border-primary shadow-2xl relative z-10">
+                    <!-- Achievement Badge -->
+                    <div class="absolute top-4 right-4 z-20 bg-blue-600 text-white p-3 rounded-full shadow-lg border-2 border-white animate-pulse">
+                        <p class="text-[10px] font-bold text-center">7TH<br>RANK</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 text-center lg:text-left" data-aos="fade-left">
+                <div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-primary text-xs font-bold mb-6">
+                    CYBERSECURITY & WORDPRESS SPECIALIST
+                </div>
+                <h1 class="text-4xl lg:text-7xl font-extrabold leading-tight mb-6">
+                    Md. Adiat <br><span class="text-primary">Hasan Riyad</span>
+                </h1>
+                <p class="text-lg opacity-70 max-w-lg mx-auto lg:mx-0 mb-8">
+                    I build secure digital ecosystems. Specializing in penetration testing, threat detection, and high-performance WordPress development.
+                </p>
+                <div class="flex justify-center lg:justify-start gap-4">
+                    <a href="#projects" class="bg-primary text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg shadow-blue-500/30">View Work</a>
+                    <a href="Full_CV.pdf" download class="glass px-8 py-4 rounded-2xl font-bold hover:bg-primary hover:text-white transition">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Details -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-1" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                <p class="opacity-70 leading-relaxed mb-6">
+                    Based in Dhaka, I am a CSE student at Green University. I combine entrepreneurial experience from my brand, <b>Bojrobishader Jhor</b>, with advanced technical security research.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-4 rounded-2xl">
+                        <p class="text-xs font-bold text-primary">NATIVE</p>
+                        <p class="text-sm font-bold">Bengali</p>
+                    </div>
+                    <div class="glass p-4 rounded-2xl">
+                        <p class="text-xs font-bold text-primary">FLUENT</p>
+                        <p class="text-sm font-bold">English</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 grid md:grid-cols-2 gap-6" id="skills">
+                <div class="glass p-6 rounded-3xl cyber-card" data-aos="fade-up">
+                    <h3 class="font-bold text-primary mb-3">Cybersecurity Tools</h3>
+                    <p class="text-xs opacity-70 mb-4">Burp Suite, Nmap, Metasploit, Aircrack-ng, Wireshark, Nessus, Acunetix</p>
+                </div>
+                <div class="glass p-6 rounded-3xl cyber-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-bold text-primary mb-3">Web Development</h3>
+                    <p class="text-xs opacity-70 mb-4">WordPress, PHP, HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="glass p-6 rounded-3xl cyber-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-bold text-primary mb-3">Machine Learning</h3>
+                    <p class="text-xs opacity-70 mb-4">CNN Models, Python, Google Colab, Kaggle, LaTeX</p>
+                </div>
+                <div class="glass p-6 rounded-3xl cyber-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-bold text-primary mb-3">Programming</h3>
+                    <p class="text-xs opacity-70 mb-4">Java, Python, C++</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project List -->
+    <section id="projects" class="py-24 px-6 bg-gray-50/50 dark:bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold">Recent Projects</h2>
+                    <p class="text-primary font-bold">From Ethical Hacking to AI</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-[32px] border-b-4 border-primary" data-aos="zoom-in">
+                    <h3 class="text-xl font-bold mb-2">bojrobishderjhor.com</h3>
+                    <p class="text-sm opacity-60 mb-6">Fully functional secure WordPress e-commerce store for a fashion brand.</p>
+                </div>
+                <div class="glass p-8 rounded-[32px] border-b-4 border-emerald-500" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-2">CNN Image Detection</h3>
+                    <p class="text-sm opacity-60 mb-6">Image detection model built with Python to identify complex visual patterns.</p>
+                </div>
+                <div class="glass p-8 rounded-[32px] border-b-4 border-purple-500" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-2">Smart Home IoT</h3>
+                    <p class="text-sm opacity-60 mb-6">IoT automation system for appliance monitoring and secure remote access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attachments Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto glass p-8 rounded-[40px] text-center" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-8">Certificates & Documents</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Full_CV.pdf" class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm">Download Full CV</a>
+                <a href="Ostad_Certificate.pdf" class="glass px-6 py-3 rounded-xl font-bold text-sm border-2 border-primary/20">Ostad Program (7th)</a>
+                <a href="Academic_Docs.zip" class="glass px-6 py-3 rounded-xl font-bold text-sm border-2 border-primary/20">Academic Certs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 px-6 text-center">
+        <p class="text-primary font-bold uppercase tracking-widest mb-4">Contact</p>
+        <h2 class="text-3xl font-bold mb-8">Mirpur 10, Dhaka, Bangladesh</h2>
+        <div class="flex justify-center gap-6 text-2xl mb-12">
+            <a href="mailto:adiatcse@gmail.com" class="hover:text-primary transition"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+8801577139322" class="hover:text-primary transition"><i class="fas fa-phone"></i></a>
+            <a href="#" class="hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-[10px] opacity-40">© 2026 MD. ADIAT HASAN RIYAD | SECURING THE FUTURE</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Theme Switcher
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.replace('dark', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                html.classList.replace('light', 'dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
